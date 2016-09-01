@@ -1,0 +1,32 @@
+{
+  "name": "adventuretron-example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "browserify renderer.js -t sheetify/transform -p [ css-extract -o bundle.css ] -o /dev/null",
+    "watch": "watchify renderer.js -t sheetify/transform -p [ css-extract -o bundle.css ] -o /dev/null",
+    "prepublish": "npm run build",
+    "start": "npm run watch & electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethvincent/adventuretron-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethvincent/adventuretron-example/issues"
+  },
+  "homepage": "https://github.com/sethvincent/adventuretron-example#readme",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "css-extract": "^1.1.2",
+    "sheetify": "^5.1.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "adventuretron": "0.0.1",
+    "marked": "^0.3.6"
+  }
+}
