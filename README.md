@@ -1,6 +1,6 @@
 # adventuretron-adventure
 
-Welcome to the adventuretron example! Adventuretron is a framework for making self-guided workshops as desktop apps.
+Learn how to build adventuretron workshops with an adventuretron workshop!
 
 This project is being developed to test out the adventuretron api and to show usage examples.
 
