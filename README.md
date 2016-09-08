@@ -1,4 +1,4 @@
-# adventuretron-example
+# adventuretron-adventure
 
 Welcome to the adventuretron example! Adventuretron is a framework for making self-guided workshops as desktop apps.
 

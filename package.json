@@ -1,5 +1,5 @@
 {
-  "name": "adventuretron-example",
+  "name": "adventuretron-adventure",
   "version": "0.0.1",
   "description": "",
   "main": "main.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sethvincent/adventuretron-example.git"
+    "url": "git+https://github.com/sethvincent/adventuretron-adventure.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sethvincent/adventuretron-example/issues"
+    "url": "https://github.com/sethvincent/adventuretron-adventure/issues"
   },
-  "homepage": "https://github.com/sethvincent/adventuretron-example#readme",
+  "homepage": "https://github.com/sethvincent/adventuretron-adventure#readme",
   "devDependencies": {
     "browserify": "^13.1.0",
     "css-extract": "^1.1.2",
