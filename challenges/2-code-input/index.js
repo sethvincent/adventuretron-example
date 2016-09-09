@@ -9,11 +9,14 @@ var initialCode = `function fun () {
   return ''
 }`
 
+var i18n = require('./i18n')
+
 module.exports = {
-  i18n: require('./i18n'),
+  i18n: i18n,
   content: function (params, send) {
+    var lang = params.language
     var challenge = params.challenge
-    var description = challenge.description[params.language]
+    var description = challenge.description[lang]
     var value = challenge.answer && challenge.answer.code ? challenge.answer.code : initialCode
 
     var inputOptions = {
@@ -52,10 +55,9 @@ module.exports = {
     }
 
     if (challenge.success) {
-      var nextOptions = {
-        onclick: function onclick (e) {
-          send('challenges:next')
-        }
+      var nextOptions = i18n[lang].next
+      nextOptions.onclick = function onclick (e) {
+        send('challenges:next')
       }
 
       return html`<div>

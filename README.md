@@ -1,4 +1,4 @@
-# adventuretron-adventure
+# adventuretron-example
 
 Learn how to build adventuretron workshops with an adventuretron workshop!
 

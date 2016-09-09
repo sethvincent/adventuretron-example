@@ -5,17 +5,19 @@ var markdown = require('adventuretron/markdown')
 var valueInput = require('adventuretron/value-input')
 var next = require('adventuretron/next')
 
+var i18n = require('./i18n')
+
 module.exports = {
-  i18n: require('./i18n'),
+  i18n: i18n,
   content: function (params, send) {
+    var lang = params.language
     var challenge = params.challenge
-    var description = challenge.description[params.language]
+    var description = challenge.description[lang]
 
     if (challenge.success) {
-      var nextOptions = {
-        onclick: function onclick (e) {
-          send('challenges:next')
-        }
+      var nextOptions = i18n[lang].next
+      nextOptions.onclick = function onclick (e) {
+        send('challenges:next')
       }
 
       return html`<div>
