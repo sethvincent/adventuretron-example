@@ -6,9 +6,10 @@ var next = require('adventuretron/next')
 
 module.exports = {
   i18n: require('./i18n'),
-  content: function (state, prev, send) {
-    var filepath = path.join(__dirname, 'content_' + state.i18n.current + '.md')
-    var description = markdown.readFileSync(filepath)
+  content: function (params, send) {
+    var challenge = params.challenge
+    var description = challenge.description[params.language]
+
     var nextOptions = {
       onclick: function onclick (e) {
         send('challenges:next')

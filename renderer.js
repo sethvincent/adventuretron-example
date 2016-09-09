@@ -11,12 +11,7 @@ var app = createApp({
     'es': 'Español'
   },
   i18n: path.join(__dirname, 'i18n'),
-  challenges: [
-    require('./challenges/0-introduction'),
-    require('./challenges/1-value-input'),
-    require('./challenges/2-code-input'),
-    require('./challenges/3-file-input')
-  ]
+  challenges: path.join(__dirname, 'challenges')
 })
 
 app.start()
